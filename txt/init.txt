@@ -1,0 +1,406 @@
+
+
+###
+###Start
+###
+@vol bgm 1.0
+@bgm 01.ogg
+@bg paifang.png 1.0
+@ch r 001-fun.png 1.0
+*小武*hello！我是小武，这里是武汉大学。作为一名准WHUER，你对武大的初印象是什么呢？
+*小武*武大作为中国最美大学之一，位于珞珈山麓，东湖之滨；山水相宜，古今合谐，承传统中华园林之精妙。
+*小武*这里就是武大的牌坊门，于1931年建成，是一座涂有油漆彩绘的三开间木质牌楼建筑。
+*小武*上悬校名“国立武汉大学”
+@goto Next
+
+:Next
+@vol bgm 0.0 1.0
+@bg paifang2.png
+@ch r 001-happy.png 1.0
+*小武*其背后篆刻的“文法理工农医”说明武大学科的包容性和多样性。
+@goto LOOP1
+
+:LOOP1
+@choose L1_ADVANTAGE "开心子！" L1_ENV "期待！" L1_NEXT Next
+
+:L1_ADVANTAGE
+
+
+*小武*那跟小武一起来吧。
+@ch c none 1.0
+@goto Next2
+
+:L1_ENV
+
+
+*小武*那跟小武一起来吧。
+@ch c none 1.0
+@goto Next2
+
+:L1_NEXT
+
+*小武*那跟小武一起来吧。
+@ch c none 1.0
+@goto Next2
+
+:Next2
+@bg kunpeng.png 1.0
+@ch r 001-fun.png 1.0
+*小武*这里是武汉大学的鲲鹏广场。含有“北溟深广，鲲翼垂天，云搏九万，水击三千”之意。
+*小武*虽然好像这样看起来不怎么看得出来霸气
+*小武*但是讷，它可比你们年纪大不少哦。
+@goto Next3
+
+:Next3
+@bg songqin.png 1.0
+@ch r 001-happy.png 1.0
+*小武*这边看一看，这里就是你们打篮球或者体操比赛的地方咯。
+*小武*每年全校的腾飞杯篮球赛的半决赛都在这里举行。
+
+:LOOP2
+@choose L2_ADVANTAGE "知道了，快进入正题" L2_ENV "小武小武，我要看美景 " L2_NEXT Next
+
+:L2_ADVANTAGE
+
+
+*小武*好了好了
+*小武*话不多说，不说多话，小武这就带大家看看风花雪月的武大。
+@ch c none 1.0
+@goto MENU
+
+:L2_ENV
+
+
+*小武*好了好了
+*小武*话不多说，不说多话，小武这就带大家看看风花雪月的武大。
+@ch c none 1.0
+@goto MENU
+
+
+:L2_NEXT
+*小武*好了好了
+*小武*话不多说，不说多话，小武这就带大家看看风花雪月的武大。
+@set $count = 0
+@ch c none 1.0
+@goto MENU
+
+
+
+###
+### Menu
+###
+
+
+
+:MENU
+@vol bgm 1.0
+@bgm 03.ogg
+@bg menu.png 1.0
+@menu menu.png menu_selected.png Chapter1 2 495 314 192 Chapter2 316 494 322 203 Chapter3 640 492 317 204 Chapter4 960 497 317 201
+
+:Chapter1
+@se click.ogg
+@goto SCENE1
+
+:Chapter2
+@se click.ogg
+@goto Scene2
+
+
+:Chapter3
+@se click.ogg
+@goto Scene3
+
+:Chapter4
+@se click.ogg
+@goto Scene4
+
+###
+### Scene 1 (秋枫叶落)
+###
+
+
+
+:SCENE1
+
+@vol bgm 0.0 1.0
+@bg white.png 1.0
+@bgm cicada.ogg
+@vol bgm 1.0 1.0
+@bg qiu.png 1.0 rule:rule-star.png
+@ch c 001-fun.png 1.0
+*小武*现在是9月份的武大。秋风催熟了枫树的叶，枫叶飘飞，在空中划出绝美的弧线。
+
+@vol bgm 0.5 1.0
+*小武*说起枫叶，大家能想到什么呢，是“踏秋赏景看红叶,寄情豪抒壮”，还是“停车做爱枫林晚，霜叶红于二月花”呢？
+@goto LOOP3
+
+:LOOP3
+@choose L3_ADVANTAGE "高中语文已经离我远去" L3_ENV  "谢邀，在查百度 " L3_NEXT "小菜一碟"
+
+:L3_ADVANTAGE
+*小武*真是个诚实的WHUER~。
+@ch c none 1.0
+@goto qiu_feng
+
+:L3_ENV
+
+*小武*真是个诚实的WHUER~。
+@cha center 1.0 move -600 0 hide
+@goto qiu_feng
+
+
+:L3_NEXT
+
+*小武*小武已经知道你的实力深不可测了。
+@cha center 1.0 move -600 0 hide
+@goto qiu_feng
+
+###
+###qiu_feng
+###
+
+:qiu_feng
+@bg qiufeng.png 1.0
+@ch r 001-happy.png 1.0
+
+*小武*小武接着往下走咯~
+@bg dadao2.png 1.0
+@ch left 001-normal.png 1.0
+*小武*知道秋天除了枫叶还有什么吗？
+*小武*还有令我们哭笑不得的梧桐絮。
+*小武*飘飞的梧桐絮会在你骑车车的时候和你的眼睛亲密接触哦，当然，也有可能是你的头发。
+*小武*据广大WHUERS反应，梧桐絮接触皮肤会很痒哦~
+
+@goto LOOP4
+
+:LOOP4
+@choose L4_ADVANTAGE "呜呜，好可怕，要抱抱" L4_ENV  "切，这有什么难的 " L4_NEXT NEXT
+
+:L4_ADVANTAGE
+*小武*看我们可怜的WHUER，快来让我抱抱。
+@ch c 001-sad.png 1.0
+@goto xiaocaochang
+
+:L4_ENV
+
+*小武*果然是狠人，祝你好运！
+@cha center 1.0 move -600 0 hide
+@goto xiaocaochang
+
+
+:L4_NEXT
+
+*小武*祝你好运！
+@cha center 1.0 move -600 0 hide
+@goto xiaocaochang
+
+
+:xiaocaochang
+
+@vol bgm 0 2
+@bg white.png 1.0
+@bgm cicada.ogg
+@bg xiaocaochang.png 1.0
+@wait 2
+@bgm stop
+@ch c 001-normal.png 1.0
+*小武*其实秋天里除了我们最期待的各种景物，还有金秋艺术节哦
+*小武*这里是梅园小操场，每年金秋艺术节的情景剧大赛都会在这里举办哦
+@ch c 001-fun.png 1.0
+*小武*当然，金秋节最令人瞩目的是——服饰大赛
+*小武*小武要保密不能告诉各位WHUER了
+@ch c 001-happy.png 1.0
+*小武*不过有票就要抢，不抢亏一年啊!
+*小武*九月的武大，我就先说到这里啦，请各位WHUER往下一个环节走吧。
+@set $count += 1
+@goto Check
+
+:Scene2
+@vol bgm 0.0 1.0
+@bg white.png 1.0
+@bgm cicada.ogg
+@vol bgm 1.0 1.0
+@bg yingding2.png 1.0 rule:rule-star.png
+@ch r 001-fun.png 1.0
+*小武*现在是3月份的武大。3月份的武大经常因为樱花上热搜呢。
+
+
+@vol bgm 0.5 1.0
+*小武*武大樱花大约有1000多株，以日本樱花、山樱花、垂枝大叶早樱和红花高盆樱为主。
+@ch r 001-happy.png 1.0
+*小武*听着是不是一顿迷糊，小武初来乍到的时候也是一顿迷糊，甚至还把桃花、海棠和樱花混在一起了呢。
+*小武*估计你们已经迫不及待要看看樱花了呢。
+@ch r none 1.0
+@vol bgm 0.0 1.0
+@bgm 04.ogg
+@bg yinghua(3).png 1.0
+@ch left 001-fun.png 1.0
+这里是文理学部的校医院附近，早樱盛开的地方。
+远远望去，树树花开，明艳的粉铺满街头。
+@ch left none 1.0
+@bg yinghua(2).png 1.0
+@ch r 001-normal.png 1.0
+*小武*这里是第五教学楼前面的草坪，樱花和嫩草交相辉映，春日生机满溢而出。
+@ch left none 1.0
+@bg yinghuadadao.png 1.0
+@ch r 001-happy.png 1.0
+*小武*这里是樱花大道，旁边是研究生的樱园宿舍。一条路的樱花盛开，迎着孟春的暖阳，欣欣然摇曳生姿。
+@set $count += 1
+@goto Check
+
+
+:Scene3
+@vol bgm 0.0 1.0
+@bg white.png 1.0
+@bgm 04.ogg
+@vol bgm 1.0 1.0
+@bg xj_paifang.png 1.0 rule:rule-star.png
+@ch c 001-fun.png 1.0
+*小武*现在是1月25日的武大。
+*小武*学过地理的WHUER都知道，武汉位于江汉平原东部，是北亚热带季风性气候，冬季最低温常在0度以上，下雪是很不容易的。
+*小武*所以每个南方的WHUER都想看一场雪。
+@goto LOOP5
+:LOOP5
+@choose L5_ADVANTAGE "呜呜， me too" L5_ENV  "北方孩子，雪堆长大 " L5_NEXT "只想待在被窝里"
+
+:L5_ADVANTAGE
+*小武*希望四年在武大能看到真正的雪
+@cha center 1.0 move -600 0 hide
+@goto dongxue
+
+:L5_ENV
+
+*小武*看来你一定是个玩雪老司机了。
+@cha center 1.0 move -600 0 hide
+@goto dongxue
+
+
+:L5_NEXT
+
+*小武*被窝也是不错的地方呢
+@cha center 1.0 move -600 0 hide
+@goto dongxue
+
+:dongxue
+
+@vol bgm 0.0 1.0
+@bgm 05.ogg
+@bg xj_xzl.png 1.0
+@vol bgm 1.0 1.0
+@ch left 001-fun.png 1.0
+这里是武大行政楼，一栋四角重檐攒尖顶的正方形大楼。
+在珞珈山这幅天然的屏风上形成一幅镶嵌的画，使原本平缓的山体徒增钟灵秀气。
+寒冬腊月，檐上积雪的行政楼让你有一种穿越时光的错觉。静谧、圣洁的气质让你觉得好像一个扫地僧。
+@ch left none 1.0
+@bg xj_yy.png 1.0
+@ch r 001-happy.png 1.0
+*小武*武大的建筑群大都是这种风格，所以在雪的映衬下更为出彩。
+*小武*可惜每年的雪景难得，所以WHUER们一定要珍惜喔~
+*小武*小武也很期待呢。不过咱们要进入下一个环节啦。
+
+@set $count += 1
+@goto Check
+
+
+
+
+
+:Scene4
+
+
+
+@vol bgm 0.0 1.0
+@bg white.png 1.0
+@bgm 04.ogg
+@vol bgm 1.0 1.0
+@bg zhongqiu1.png 1.0 rule:rule-star.png
+@ch c 001-fun.png 1.0
+*小武*现在是农历9月15日的武大，与以往不同，现在是晚上。繁星作伴征途，学子征战深夜回归。你肯定以为我说的是这个。
+*小武*但是讷...WHUERS怎么可能放过中秋的夜晚呢？
+@goto LOOP6
+:LOOP6
+@choose L6_ADVANTAGE "对，不可能" L6_ENV  "芜湖，搞事情 " L6_NEXT NEXT
+
+:L6_ADVANTAGE
+*小武*WHUERS就要学会日常搞-事-情！
+@ch c none 1.0
+@goto zhongqiu
+
+:L6_ENV
+
+*小武*WHUERS就要学会日常搞-事-情！
+@cha center 1.0 move -600 0 hide
+@goto zhongqiu
+
+
+:L6_NEXT
+
+*小武*WHUERS就要学会日常搞-事-情！
+@cha center 1.0 move -600 0 hide
+@goto zhongqiu
+
+:zhongqiu
+
+@vol bgm 0.0 1.0
+@bgm 05.ogg
+@bg laotu.png 1.0
+@ch left 001-fun.png 1.0
+这里是武汉大学老图书馆，几乎每个中秋节的夜晚，老图书馆门口总是会聚集一堆拍月亮的WHUERS。
+当然，或许他们还会唱上几句“明月几时有，把酒问青天。”
+@goto LOOP7
+:LOOP7
+@choose L7_ADVANTAGE "DNA动了" L7_ENV  "还有更刺激的吗？ " L7_NEXT NEXT
+
+:L7_ADVANTAGE
+*小武*小武真好奇你的DNA里都装了什么
+@ch c none 1.0
+@goto zhongqiu2
+
+:L7_ENV
+
+*小武*更刺激的来了
+@cha center 1.0 move -600 0 hide
+@goto zhongqiu2
+:L7_NEXT
+
+*小武*更刺激的来了
+@cha center 1.0 move -600 0 hide
+@goto zhongqiu2
+
+:zhongqiu2
+@ch left none 1.0
+@bg zhongqiu2.png 1.0
+@ch r 001-happy.png 1.0
+*小武*或许我们还有中秋东湖行？在东湖湖面泛起的波光粼粼，然后吃着美味的零食
+*小武*然后被蚊子咬，哈哈哈哈哈哈哈哈
+*小武*话说小武不能忘记，那天晚上，有人举着手机调各种参数，有人架起相机在找时机，也有人甚至架起了望远镜...
+@ch r 001-fun.png 1.0
+*小武*中秋的月亮真的是魅力无穷啊
+@set $count += 1
+@goto Check
+
+
+
+###
+### Scene5
+###
+:Check
+@if $count != 4 MENU
+
+Thank you for selecting all the options.
+@goto END
+
+
+
+###
+### Quit Logo
+###
+
+:END
+@skip disable
+@vol bgm 0.0 2.0
+@bg white.png 1.0
+@ch c xiaohui.png 1.0
+@wait 1.0
+@ch c none 1.0

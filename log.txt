@@ -1,0 +1,5 @@
+Cannot open file "bg/yinghua(2).png".
+
+> Script execution error: init.txt:242
+> @bg yinghua(2).png 1.0
+
